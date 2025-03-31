@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-header {
+            background-color: white;
+            color: navy;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .company-logo {
+            height: 23px;
+            width: auto; 
+            display: flex;
+            align-items: center;
+        }
+        .company-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        .company-name {
+            font-weight: bold;
+            font-size: 19px;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0;
+            background-color: #95bde5;
+            height: 40px;
+            flex-shrink: 0;
+        }
+        .nav {
+            display: flex;
+            height: 100%;
+        }
+        .nav a {
+            text-decoration: none;
+            color: navy;
+            font-weight: bold;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            position: relative;
+            background-color: transparent;
+        }
+        .nav a:hover {
+            background-color: navy;
+            color: white;
+            border: 2px solid rgb(89, 89, 217);
+            transform: scale(1.05);
+        }
+        .nav a:active {
+            background-color: navy;
+            color: white;
+            border: 2px solid rgb(89, 89, 217);
+        }
+        .nav a.active {
+            background-color: navy;
+            color: white;
+            border: 2px solid rgb(89, 89, 217);
+        }
+        .main-container {
+            flex: 1;
+            width: 100%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+        .project {
+            width: 100%;
+            min-height: 200px;
+            border: 2px solid rgb(193, 193, 231);
+            margin-bottom: 10px;
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+        }
+        .project img {
+            width: 350px;
+            height: 220px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+        .project-content {
+            flex: 1;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .project h2 {
+            color: navy;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .project p {
+            color: navy;
+            line-height: 1.5;
+        }
+        .footer {
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin-top: auto;
+        }
+        .footer-top {
+            height: 70%;
+            background-color: rgb(12, 12, 96);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-icons {
+            display: flex;
+            gap: 25px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #95bde5;
+        }
+        .footer-bottom {
+            height: 30%;
+            background-color: navy;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="logo-container">
+            <div class="company-logo">
+                <img src="gradiouslogo.jpg" alt="Gradious Logo">
+            </div>
+            <div class="company-name">Gradious</div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About Me</a>
+            <a href="project.html" class="active" >Projects</a>
+            <a href="contact.html" >Contact</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="project">
+            <img src="SimpleInterestCalculator.webp" alt="Simple Interest Calculator">
+            <div class="project-content">
+                <h2>Simple Interest Calculator</h2>
+                <p>This intuitive web application simplifies financial calculations by allowing users to quickly determine interest amounts on loans or investments. Built with HTML, CSS, and JavaScript, it features a clean interface where users input the principal amount, annual interest rate, and time period (in years/months). The system instantly computes simple interest using the formula I = PRT/100, displaying both the interest earned and total payable amount. Designed for financial literacy, it helps students understand basic finance concepts, assists small business owners in loan planning, and enables individuals to compare investment options. Additional features include a breakdown visualization chart, the ability to save calculations, and an option to toggle between yearly/monthly computations. The responsive design ensures accessibility across devices, making it equally useful for quick mobile calculations or detailed desktop analysis.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="NewsApp.jpg" alt="Real Time News App">
+            <div class="project-content">
+                <h2>Real Time News App</h2>
+                <p>This dynamic news aggregator platform curates and delivers live updates from multiple verified sources including major publications, blogs, and press releases. The React-based frontend with Node.js backend offers personalized news feeds based on user preferences and reading history. Key features include AI-powered categorization (politics, technology, sports etc.), customizable alerts for breaking news, and a bookmarking system for saving articles. The application implements sentiment analysis to highlight positive/negative tone in articles and offers a "fact check" badge for verified stories. Its purpose extends beyond information delivery to combating misinformation by cross-referencing sources and providing media bias indicators. The clean, ad-free interface prioritizes readability with adjustable text size and dark mode, serving as a comprehensive yet distraction-free news hub for professionals, researchers, and general readers.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="LearningManagementSystem.jpg" alt="Learning Management System">
+            <div class="project-content">
+                <h2>Learning Management System</h2>
+                <p>A comprehensive educational platform developed with MERN stack (MongoDB, Express, React, Node.js) that facilitates complete course management for institutions and corporate trainers. The system enables educators to upload multimedia content (videos, PDFs, quizzes), track student progress through analytics dashboards, and conduct live virtual classes with integrated Zoom API. Students benefit from interactive features like discussion forums, peer review systems, and AI-powered tutoring chatbots. The LMS supports SCORM-compliant content, gamification through badges/leaderboards, and accessibility features like screen reader compatibility. Its primary purpose is to bridge geographical educational gaps by providing a centralized, scalable solution for remote learning while reducing administrative overhead through automated grading, attendance tracking, and performance reporting tools for administrators.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-top">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="mailto:vidyadonthagani@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="http://linkedin.com/in/saividyasri" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SaiVidyaSri" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © Gradious Technologies (p) Ltd. 2025
+        </div>
+    </div>
+</body>
+</html>

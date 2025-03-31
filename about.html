@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .top-header {
+            background-color: white;
+            color: navy;
+            height: 35px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 0.9em;
+            flex-shrink: 0;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .company-logo {
+            height: 23px;
+            width: auto; 
+            display: flex;
+            align-items: center;
+        }
+        .company-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+        .company-name {
+            font-weight: bold;
+            font-size: 19px;
+        }
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 0;
+            background-color: #95bde5;
+            height: 40px;
+            flex-shrink: 0;
+        }
+        .nav {
+            display: flex;
+            height: 100%;
+        }
+        .nav a {
+            text-decoration: none;
+            color: navy;
+            font-weight: bold;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-color: transparent;
+        }
+        .nav a:hover {
+            background-color: navy;
+            color: white;
+            border: 2px solid rgb(89, 89, 217);
+            transform: scale(1.05);
+        }
+        .nav a:active {
+            background-color: navy;
+            color: white;
+            border: 2px solid rgb(89, 89, 217);
+        }
+        .nav a.active {
+            background-color: navy;
+            color: white;
+            border: 2px solid rgb(89, 89, 217);
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            overflow: auto;
+        }
+        .image-container {
+            width: 40%;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            position: sticky;
+            top: 0;
+            height: calc(100vh - 50px);
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .content {
+            width: 60%;
+            padding: 40px;
+            overflow: auto;
+        }
+        .Education {
+            display: flex;
+            flex-direction: column;
+            color: navy;
+        }
+        .Education h2 {
+            font-weight: bold;
+            margin-left: 20px;
+            margin-top: -15px;
+        }
+        .Education p {
+            color: navy;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        .Tech-skills {
+            display: flex;
+            flex-direction: column;
+            color: navy;
+            margin-top: 20px;
+        }
+        .Tech-skills h2 {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .Tech-skills p {
+            color: navy;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        .Soft-skills {
+            display: flex;
+            flex-direction: column;
+            color: navy;
+            margin-top: 20px;
+        }
+        .Soft-skills h2 {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .Soft-skills ol li {
+            color: navy;
+            margin-left: 40px;
+            margin-top: 5px;
+        }
+        .Hobbies {
+            display: flex;
+            flex-direction: column;
+            color: navy;
+            margin-top: 20px;
+        }
+        .Hobbies h2 {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .Hobbies ol li {
+            color: navy;
+            margin-left: 40px;
+            margin-bottom: 5px;
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+            color: navy;
+            margin-top: 20px;
+        }
+        .details h2 {
+            font-weight: bold;
+            margin-left: 20px;
+        }
+        .details p {
+            color: navy;
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        .footer {
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            flex-shrink: 0;
+        }
+        .footer-top {
+            height: 70%;
+            background-color: rgb(12, 12, 96);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-icons {
+            display: flex;
+            gap: 25px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            transition: transform 0.3s, color 0.3s;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: #95bde5;
+        }
+        .footer-bottom {
+            height: 30%;
+            background-color: navy;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8em;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-header">
+        <div class="logo-container">
+            <div class="company-logo">
+                <img src="gradiouslogo.jpg" alt="Gradious Logo">
+            </div>
+            <div class="company-name">Gradious</div>
+        </div>
+    </div>
+    <div class="header">
+        <div class="nav">
+            <a href="index.html" >Home</a>
+            <a href="about.html" class="active" >About Me</a>
+            <a href="project.html" >Projects</a>
+            <a href="contact.html" >Contact</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="image-container">
+            <img src="2.jpg" alt="Profile Photo">
+        </div>
+        <div class="content">
+            <div class="Education">
+                <h2>EDUCATION</h2><br>
+                <P>BTECH - 92% from Vasireddy Venkatadri International Technological University</P>
+                <p>12th BIEAP - 97.5% from NRI Junior College</p>
+                <p>10th SSC - 97% from Bhashyam High School</p>
+            </div>
+            <div class="Tech-skills">
+                <h2>TECHNICAL SKILLS</h2><br>
+                <P>Programming Language - C, Python, Java, HTML, CSS</P>
+                <p>Concepts - Object Oriented Programming, Data Structures, Algorithms</p>
+                <p>Database - SQL</p>
+            </div>
+            <div class="Soft-skills">
+                <h2>SOFT SKILLS</h2><br>
+                <ol>
+                    <li>Hard worker</li>
+                    <li>Dedicated</li>
+                    <li>Quick Learner</li>
+                    <li>Self-Dependent</li>
+                </ol>
+            </div>
+            <div class="Hobbies">
+                <h2>HOBBIES</h2><br>
+                <ol>
+                    <li>Exploring new Places</li>
+                    <li>Attending Family Gatherings</li>
+                    <li>Learning new things</li>
+                    <li>Improving communication skills</li>
+                    <li>Watching new movies</li>
+                </ol>
+            </div>
+            <div class="details">
+                <h2>PERSONAL DETAILS</h2><br>
+                <p>D.O.B: 28/11/2004</p>
+                <p>Father's name: Ramesh Babu</p>
+                <p>Mother's name: Roja Rani</p>
+                <p>Address: Bhaskara Rao Pet, Tenali, 522201</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-top">
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://google.com" target="_blank"><i class="fab fa-google"></i></a>
+                <a href="mailto:vidyadonthagani@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="http://linkedin.com/in/saividyasri" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SaiVidyaSri" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © Gradious Technologies (p) Ltd. 2025
+        </div>
+    </div>
+</body>
+</html>
